@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>YVETTE</title>
+    <link rel='stylesheet' type='text/css' href='./resources/css/reset.css'>
+
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata|Josefin+Sans:300,400,700,700i|Karla|Work+Sans" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+
+    <!-- BOOTSTRAP -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <link rel='stylesheet' type='text/css' href='./resources/css/style.css'>
+
+    <!-- CUSTOM JS -->
+    <script type="text/javascript" src="/Users/noahkardos-fein/code/projects/Personal_Projects/YVETTE_site/resources/js/tabletop.js"></script>
+    <!--
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.4.2/tabletop.min.js"></script>
+    -->
+
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+
+    <script type="text/javascript" src="/Users/noahkardos-fein/code/projects/Personal_Projects/YVETTE_site/resources/js/table.js"></script>
+
+    <script type="text/javascript" src='/Users/noahkardos-fein/code/projects/Personal_Projects/YVETTE_site/resources/js/sheetsee.js'></script>
+
+    <link rel="stylesheet" type="text/css" href="css/sss.css">
+
+    <link rel="icon" href="" type="image/x-icon">
+  </head>
+
+  <body>
+
+    <header>
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <ul>
+            <li><h1>YVETTE</h1></li>
+            <li><h1><a href="#">SHOWS</a></h1></li>
+            <li><h1><a href="#">AUDIO</a></h1></li>
+            <li><h1><a href="#">INFO</a></h1></li>
+          </ul>
+          <div class="social_buttons">
+            <ul>
+              <li><a href="www.facebook.com/yvettemusic" target="blank"><i class="fab fa-facebook-square fa-2x"></i></a></li>
+              <li><a href="www.twitter.com/___YVETTE___" target="blank"><i class="fab fa-twitter-square fa-2x"></i></a></li>
+              <li><a href="www.instagram.com/___yvette___" target="blank"><i class="fab fa-instagram fa-2x"></i></a></li>
+              <li><a href="http://yvette.bandcamp.com" target="blank"><i class="fab fa-bandcamp fa-2x"></i></a></li>
+              <li><a href="www.soundcloud.com/yvettemusic" target="blank"><i class="fab fa-soundcloud fa-2x"></i></a></li>
+              <li><a href="https://open.spotify.com/artist/4uYi4Z73X5SHH8v7UJ2PeO?si=gAK7DyQYTo2yUef6cSqsIA"><i class="fab fa-spotify fa-2x"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+<!-- MAIN SPLASH -->
+    <div class="main_space">
+
+    </div>
+
+<!-- SHOWS -->
+    <!-- SHEETSEE -->
+    <div id="SHOWS">
+      <h1 class="title">SHOWS</h1>
+      <div class="container">
+        <div id="fullTable"></div>
+
+        <script id="fullTable_template" type="text/html">
+          <table>
+            <tr><th class="tHeader">DATE</th><th class="tHeader">LOCATION</th><th class="tHeader">VENUE</th><th class="tHeader">NOTES</th><th class="tHeader">TICKETS/INFO</th></tr>
+              {{#rows}}
+                <tr><td>{{DATE}}</td><td>{{LOCATION}}</td><td>{{VENUE}}</td><td>{{NOTES}}</td><td><a href="{{TICKETS/INFO}}" target="_blank">CLICK HERE</a></td></tr>
+              {{/rows}}
+            </table>
+        </script>
+
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            var URL = '1S5rdcFbxvQcAdY4xJ4a6GD5eEgG-7Jtg6oa6cjl6ths'
+            Tabletop.init( { key: URL, callback: myData, simpleSheet: true } )
+        })
+        function showInfo (data) {
+           var tableOptions = {
+             "data": data,
+             "pagination": 10,
+             "tableDiv": "#fullTable",
+             "filterDiv": "#fullTableFilter"
+           }
+           Sheetsee.makeTable(tableOptions)
+           Sheetsee.initiateTableFilter(tableOptions)
+         }
+        </script>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+    <!--
+    <div class="shows">
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
+      <script type='text/javascript'>
+        var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1S5rdcFbxvQcAdY4xJ4a6GD5eEgG-7Jtg6oa6cjl6ths/edit?usp=sharing';
+
+        function init() {
+          Tabletop.init( { key: publicSpreadsheetUrl,
+                           callback: showInfo,
+                           simpleSheet: true } )
+        }
+
+        function showInfo(data, tabletop) {
+          alert('Successfully processed!')
+          console.log(data);
+        }
+
+        window.addEventListener('DOMContentLoaded', init)
+      </script>
+    -->
+
+
+    <!-- AUDIO -->
+
+    <div id="audio">
+      <h1 class="title">AUDIO</h1>
+      <div class="release">
+        <h2 class="title">TIME MANAGEMENT</h2>
+        <a href="#" class="thumbnail">
+          <img src="/Users/noahkardos-fein/code/projects/Personal_Projects/yvette/resources/images/YVETTE_timemanagement.jpg" alt="YVETTE Time Management cover art">
+        </a>
+        <h5 class="date">2015</h5>
+        <span class="listen">LISTEN:</span>
+    </div>
+
+
+    <!-- INFO -->
+
+    <div id="INFO">
+    <h1 class="title">INFO</h1>
+
+    </div>
+
+
+  </body>
+</html>
