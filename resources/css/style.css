@@ -28,6 +28,15 @@ h1 .title {
   overflow: auto;
 }
 
+.title {
+  padding-left: .5em;
+}
+
+.container {
+  max-width: 1260px;
+  padding: 0px;
+}
+
 /* HEADER */
 
 header {
@@ -85,6 +94,10 @@ i {
 
 /* SHOWS */
 
+.container.table-full {
+  max-width: 1180px;
+}
+
 table {
   border-spacing: 0;
 }
@@ -102,7 +115,7 @@ thead {
   min-width: 140px;
   vertical-align: top;
   padding: 8px;
-  max-width: 160px;
+  max-width: 1140px;
   word-wrap: break-word;
   text-align: left;
 }
@@ -131,4 +144,29 @@ ul li {
   flex-wrap: wrap;
   margin: 0 0 3em 0;
   padding: 0;
+}
+
+
+/* AUDIO */
+
+.release img {
+  height: 300px;
+  display: flex;
+  justify-content: flex-start;
+  margin: 0;
+}
+
+.thumbnail {
+  padding: 20px;
+  border-radius: 1px;
+  box-shadow: none;
+}
+
+.row.display-flex {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+.thumbnail {
+  height: 100%;
 }
