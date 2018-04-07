@@ -13,6 +13,7 @@ body {
 h1 {
   font-size: 4.5em;
   font-weight: bold;
+  padding-bottom: .3em;
 }
 
 h1 .title {
@@ -43,10 +44,18 @@ header {
   display: flex;
 }
 
+.navbar, .navbar-defult {
+  margin-bottom: 0px;
+  border-radius: none;
+}
+
 nav .container-fluid {
   margin: 0;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 nav {
@@ -57,15 +66,22 @@ nav {
 nav ul {
   display: flex;
   align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  margin-bottom: 0px;
 }
 
 nav ul li {
-  margin: 10px;
+  margin: 0px 10px 0px 10px;
+  display: flex;
+  align-items: center;
+  padding-bottom: 0px;
 }
 
 .social_buttons {
   display: flex;
   align-items: center;
+  margin: 10px 0px 10px 0px;
 }
 
 .social_buttons ul {
@@ -74,6 +90,15 @@ nav ul li {
 
 i {
   color: #A9A9A9;
+}
+
+.section {
+  border-top: 1.5px solid black;
+}
+
+.navbar h1 {
+  padding-bottom: 0px;
+  margin: 0px 0px 10px 0px;
 }
 
 /* MAIN SPACE */
@@ -128,13 +153,13 @@ tr {
   height: 50px;
 }
 
-ul, ol {
+#fullTable ul, ol {
   text-indent: 0;
   margin: 0;
   padding-left: 20px;
 }
 
-ul li {
+#fullTable ul li {
   padding-bottom: 6px;
   line-height: 22px;
 }
@@ -169,4 +194,41 @@ ul li {
 }
 .thumbnail {
   height: 100%;
+}
+
+/* INFO */
+
+.info.container {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 300px;
+}
+
+
+
+/* FOOTER */
+
+footer {
+  display: flex;
+  flex-direction: row;
+  padding-left: 20px;
+  font-size: .8em;
+  color: white;
+  margin-top: 10px;
+  padding-top: 110px;
+  border-top: 1.5px solid black;
+  background-image: url("/Users/noahkardos-fein/code/projects/Personal_Projects/yvette/resources/images/180125_WILLIAM_MEBANE-317 copy.jpg");
+}
+
+.footerlist {
+  padding-left: none;
+}
+
+footer ul li {
+  display: inline-block;
+  padding-left: 3px;
+}
+
+footer ul li:before {
+	content: "| ";
 }
