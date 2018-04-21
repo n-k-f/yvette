@@ -243,6 +243,10 @@ tbody tr:first-child:hover {
 
 /* AUDIO */
 
+.col-sm-6.col-md-4 {
+  margin-top: 20px;
+}
+
 .release img {
   height: 300px;
   display: flex;
@@ -287,7 +291,8 @@ tbody tr:first-child:hover {
 }
 
 .music_embed {
-  min-height: 81px;
+  min-height: 126px;
+  max-height: 150px;
 
 }
 
