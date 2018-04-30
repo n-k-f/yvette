@@ -244,9 +244,18 @@ tbody tr:first-child:hover {
 
 /* AUDIO */
 
+/* for desktop */
 .col-sm-6.col-md-4 {
   margin-top: 20px;
-  width: 100%;
+
+}
+
+/* for mobile */
+@media only screen and (max-width: 768px) {
+  .col-sm-6.col-md-4 {
+    margin-top: 20px;
+    width: 100%;
+  }
 }
 
 .release img {
