@@ -15,7 +15,7 @@ h1 {
   font-weight: bold;
   padding-bottom: .3em;
   color: #efefef;
-  font-family: 'Old Standard TT', serif;
+  font-family: 'Roboto', Helvetica Neue, Arial, sans-serif;
   margin-top: 40px;
   display: flex;
   align-items: center;
@@ -24,7 +24,7 @@ h1 {
 
 h2, h3, h4, h5 {
   color: #efefef;
-  font-family: 'Old Standard TT', serif;
+  font-family: 'Roboto', Helvetica Neue, Arial, sans-serif;
 }
 
 .container {
@@ -181,7 +181,7 @@ tbody tr:nth-child(even) {
 
 thead {
   text-align: left;
-  font-family: "Inconsolata", Arial, sans-serif;
+  font-family: 'Roboto', Helvetica Neue, Arial, sans-serif;
 }
 
 .tHeader {
@@ -288,7 +288,7 @@ tbody tr:first-child:hover {
 }
 
 .date {
-  font-family: "Inconsolata", Helvetica Neue, sans-serif;
+  font-family: 'Roboto', Helvetica Neue, Arial, sans-serif;
   padding: 0px 0px 10px 10px;
 }
 
